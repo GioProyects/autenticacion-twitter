@@ -20,8 +20,8 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"]==true) {
     <br>
     <br>
     <button type="button" id="btnDatos">Get datos</button>
-    <p id="token" ><?php echo $_SESSION["oauth_token"] ?></p>
-    <p id="token_secreto" ><?php echo $_SESSION["oauth_token_secret"] ?></p>
+    <p id="token" hidden><?php echo $_SESSION["oauth_token"] ?></p>
+    <p id="token_secreto" hidden><?php echo $_SESSION["oauth_access_token"] ?></p>
     <!-- <a href="twitter/tweets.php">Get datos</a> -->
     <div id="resultados"></div>
 
