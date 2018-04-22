@@ -12,10 +12,11 @@
 
     <?php
     if (isset($_SESSION)) {
+      var_dump($_SESSION);
      ?>
      <button type="button" id="btnDatos">Get datos</button>
      <div id="resultados"></div>
-    <?php }else{ ?>
+    <?php }else{  ?>
       <button type="button">  <a href="twitter/autenticacion.php">Acceder</a> </button>
       <h3>No has inicado sesion</h3>
     <?php } ?>

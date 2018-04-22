@@ -1,9 +1,9 @@
 <?php
 require_once 'TwitterAPIExchange.php';
-define('CONSUMER_KEY', '14Vrox7LXSabtc3tq25IkW6eQ');
-define('CONSUMER_SECRET', 'b9FdDir0UP44RVuMfotRwcOYwzx9P7hUnVUcioX5IkT6LMxw9r');
-$TOKEN='449924072-ZS3sYSmyUJ2LSfrsXHTr3usEtNGMGo670DR2Od2h';
-$TOKEN_SECRET='39mJyP7h9Hc0QAvb9GrSKGveUITfpzB1MdjMRaLRQcmiA';
+define('CONSUMER_KEY', 'IsfOhNHmYtQS5myPZvXB7kqCf');
+define('CONSUMER_SECRET', 'hSe6ZQbao5wEyIvlGFXhA1itlSME9NBhsqOsiKYm5jmOUFJLMx');
+$TOKEN='449924072-LfvTLKWeVwVGKqDCoISSOrAUDVZx2tSaJjEN6aDe';
+$TOKEN_SECRET='cXJLCOaSna7LycPH0TephGBQkYhwuv3h9lCdAqg8c96RU';
 
 $settings = array(
   'oauth_access_token' => $TOKEN,
