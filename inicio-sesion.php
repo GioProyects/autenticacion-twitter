@@ -9,5 +9,7 @@
     <a href="twitter/tweets.php">Get datos</a>
     <div id="resultados"></div>
 
+    <script src="js/funciones.js"></script>
+
   </body>
 </html>
