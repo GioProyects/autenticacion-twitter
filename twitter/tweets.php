@@ -26,7 +26,7 @@
 if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == true) {
   echo json_encode(array(
     "Saludo"=>"Hola",
-    "datos_sesion"=>
+    "datos_sesion"=>$_SESSION
   ));
 } else {
   echo json_encode(array(
