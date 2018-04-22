@@ -1,31 +1,29 @@
 <?php
 session_start();
 require_once 'TwitterAPIExchange.php';
-// define('CONSUMER_KEY', 'IsfOhNHmYtQS5myPZvXB7kqCf');
-// define('CONSUMER_SECRET', 'hSe6ZQbao5wEyIvlGFXhA1itlSME9NBhsqOsiKYm5jmOUFJLMx');
-// // $TOKEN='449924072-LfvTLKWeVwVGKqDCoISSOrAUDVZx2tSaJjEN6aDe';
-// // $TOKEN_SECRET='cXJLCOaSna7LycPH0TephGBQkYhwuv3h9lCdAqg8c96RU';
-//
-// if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"]==true) {
-//   // var_dump($_SESSION);
-//   $datos = array(
-//     'saludo' => "hola",
-//     "datos_sesion"=>$_SESSION
-//   );
-//
-//   echo json_encode($datos);
-//
-// }else {
-//
-//   echo json_encode(arra(
-//     "Error"=> "Necesita iniciar sesion con twitter",
-//     "Regreso"=> "index.php"
-//   ));
-// }
-echo json_encode(array(
-  "Saludo"=>"Hola",
-  "Mensaje"=>"como estas"
-));
+define('CONSUMER_KEY', 'IsfOhNHmYtQS5myPZvXB7kqCf');
+define('CONSUMER_SECRET', 'hSe6ZQbao5wEyIvlGFXhA1itlSME9NBhsqOsiKYm5jmOUFJLMx');
+$TOKEN=$_SESSION["oauth_token"];
+$TOKEN_SECRET=$_SESSION["oauth_access_token"];
 
+$url="https://api.twitter.com/1.1/statuses/update.json";
+$postfields=array(
+  "status"=>"Hola mundo twitter"
+);
+$requestMethod="POST";
+
+$settings = array(
+    'oauth_access_token' => $TOKEN,
+    'oauth_access_token_secret' => $TOKEN_SECRET,
+    'consumer_key' => CONSUMER_KEY,
+    'consumer_secret' => CONSUMER_SECRET
+);
+
+$twitter=new TwitterAPIExchange($settings);
+$response=$twitter->buildOauth($url,$requestMethod)
+        ->setPostfields($postfields)
+        ->performRequest();
+
+echo json_decode($response);
 
  ?>
