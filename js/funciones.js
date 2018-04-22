@@ -13,8 +13,8 @@ var fun=(function () {
   }
 
   var main=function () {
-    var token=document.getElementById('token');
-    var token_secreto=document.getElementById('token_secreto');
+    var token=document.getElementById('token').textContent;
+    var token_secreto=document.getElementById('token_secreto').textContent;
     console.log(token);
     console.log(token_secreto);
   }
