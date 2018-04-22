@@ -5,7 +5,7 @@
     <title>Iniciado Sesion</title>
   </head>
   <body>
-    <button type="button"> <a href="twitter/tweets.php"></a> Get datos</button>
+    <a href="twitter/tweets.php">Get datos</a>
     <div id="resultados"></div>
 
   </body>
