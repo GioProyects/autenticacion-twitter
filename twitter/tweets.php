@@ -16,7 +16,12 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"]==true) {
   echo json_encode($datos);
 
 }else {
-  echo "<p> Necesita iniciar sesion con twitter</p>";
-  echo "<br> <a href='index.php'> Regresar </a>;
+
+  echo json_encode(arra(
+    "Error"=> "Necesita iniciar sesion con twitter",
+    "Regreso"=> "index.php"
+  ));
+  // echo "<p> </p>";
+  // echo "<br> <a href=''> Regresar </a>;
 }
  ?>
