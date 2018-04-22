@@ -16,6 +16,4 @@ var fun=(function () {
     sesion:datos
   };
 })();
-if (document.getElementById('btnDatos') !== null) {
-  document.getElementById("btnDatos").addEventListener("click",fun.sesion);
-}
+document.getElementById("btnDatos").addEventListener("click",fun.sesion);
