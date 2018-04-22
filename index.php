@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/estilos.css">
   </head>
   <body>
-      <button type="button">  <a href="twitter/autenticacion.php">Acceder</a> </button>
+      <a href="twitter/autenticacion.php">Acceder</a>
       <h3>No has inicado sesion</h3>
 
     <script src="js/funciones.js"></script>
