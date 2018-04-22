@@ -1,10 +1,10 @@
 <?php
 // session_start();
 require_once 'TwitterAPIExchange.php';
-define('CONSUMER_KEY', 'IsfOhNHmYtQS5myPZvXB7kqCf');
-define('CONSUMER_SECRET', 'hSe6ZQbao5wEyIvlGFXhA1itlSME9NBhsqOsiKYm5jmOUFJLMx');
-$TOKEN='449924072-LfvTLKWeVwVGKqDCoISSOrAUDVZx2tSaJjEN6aDe';
-$TOKEN_SECRET='cXJLCOaSna7LycPH0TephGBQkYhwuv3h9lCdAqg8c96RU';
+define('CONSUMER_KEY', 'TbRLT7VPwbeJPCd9y5Ul1CjcR');
+define('CONSUMER_SECRET', 'vh1EjFI7HpeKdR5WNNU361Dw9pTRWSIlcVXqH3SJXQ3tDmEVaw');
+$TOKEN='449924072-TUNDtahCwzLnS7LzICAlYT5dSFg75UwikrEHmueS';
+$TOKEN_SECRET='akIH21y5wZWKMSqfNTSsRTKmgrg0HuqrrJPSlIFLxQe1b';
 
 $settings = array(
   'oauth_access_token' => $TOKEN,
@@ -23,12 +23,13 @@ $twitter=new TwitterAPIExchange($settings);
 $response=$twitter->buildOauth($url,$requestMethod)
                   ->setPostfields($postfields)
                   ->performRequest();
-var_dump($response);
-// $porcion=explode("&",$response);
+// var_dump($response);
+$porcion=explode("&",$response);
+var_dump($porcion[0]);
 // $credenciales = array();
 // foreach ($porcion as $k) {
 //   $temp=explode("=",$k);
-//   $credenciales[$temp[0]]=$temp[1];
+  // $credenciales[$temp[0]]=$temp[1];
 // }
 
 // var_dump($credenciales);
