@@ -1,5 +1,5 @@
 <?php
-// session_start();
+session_start();
 require_once 'TwitterAPIExchange.php';
 define('CONSUMER_KEY', 'TbRLT7VPwbeJPCd9y5Ul1CjcR');
 define('CONSUMER_SECRET', 'vh1EjFI7HpeKdR5WNNU361Dw9pTRWSIlcVXqH3SJXQ3tDmEVaw');
