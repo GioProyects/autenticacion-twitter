@@ -4,7 +4,7 @@ var fun=(function () {
     xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
         // callback(this.responseText);
-        console.log(this.responseText);
+        console.log(JSON.parse(this.responseText));
       }
     }
     xhttp.open("GET", "twitter/tweets.php", true);

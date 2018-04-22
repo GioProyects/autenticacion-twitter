@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once 'TwitterAPIExchange.php';
 define('CONSUMER_KEY', 'IsfOhNHmYtQS5myPZvXB7kqCf');
 define('CONSUMER_SECRET', 'hSe6ZQbao5wEyIvlGFXhA1itlSME9NBhsqOsiKYm5jmOUFJLMx');
@@ -34,8 +35,10 @@ foreach ($porcion as $k) {
 
 $TOKEN=$credenciales["oauth_token"];
 $TOKEN_SECRET=$credenciales["oauth_token_secret"];
+
 $_SESSION["oauth_token"]=$credenciales["oauth_token"];
 $_SESSION["oauth_access_token"]=$credenciales["oauth_token_secret"];
+$_SESSION["loggedin"]=true;
 
 $url2="https://api.twitter.com/oauth/authorize";
 $requestMethod2="GET";
