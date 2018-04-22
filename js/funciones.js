@@ -12,9 +12,15 @@ var fun=(function () {
     xhttp.send();
   }
 
+  var main=function () {
+    var token=document.getElementById('token').value;
+    var token_secreto=document.getElementById('token_secreto').value;
+    console.log(token);
+    console.log(token_secreto);
+  }
 
   return {
-    sesion:datos
+    sesion:main
   };
 })();
 document.getElementById("btnDatos").addEventListener("click",fun.sesion);
