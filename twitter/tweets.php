@@ -1,5 +1,5 @@
 <?php
-session_start();
+// session_start();
 // require_once 'twitter/TwitterAPIExchange.php';
 // define('CONSUMER_KEY', 'IsfOhNHmYtQS5myPZvXB7kqCf');
 // define('CONSUMER_SECRET', 'hSe6ZQbao5wEyIvlGFXhA1itlSME9NBhsqOsiKYm5jmOUFJLMx');
