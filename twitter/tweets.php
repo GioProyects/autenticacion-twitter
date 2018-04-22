@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'TwitterAPIExchange.php';
+require_once 'twitter/TwitterAPIExchange.php';
 define('CONSUMER_KEY', 'IsfOhNHmYtQS5myPZvXB7kqCf');
 define('CONSUMER_SECRET', 'hSe6ZQbao5wEyIvlGFXhA1itlSME9NBhsqOsiKYm5jmOUFJLMx');
 // $TOKEN='449924072-LfvTLKWeVwVGKqDCoISSOrAUDVZx2tSaJjEN6aDe';
