@@ -28,7 +28,7 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"]==true) {
   $response=$twitter->buildOauth($url,$requestMethod)
           ->setPostfields($postfields)
           ->performRequest();
-  echo json_decode($response);
+  var_dump($response);
 }else{
   echo array(
     "Error"=>"debe iniciar sesion"
