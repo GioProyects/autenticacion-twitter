@@ -1,5 +1,5 @@
 <?php
-session_start();
+// session_start();
 require_once 'TwitterAPIExchange.php';
 define('CONSUMER_KEY', 'IsfOhNHmYtQS5myPZvXB7kqCf');
 define('CONSUMER_SECRET', 'hSe6ZQbao5wEyIvlGFXhA1itlSME9NBhsqOsiKYm5jmOUFJLMx');
@@ -23,37 +23,37 @@ $twitter=new TwitterAPIExchange($settings);
 $response=$twitter->buildOauth($url,$requestMethod)
                   ->setPostfields($postfields)
                   ->performRequest();
-// var_dump($response);
-$porcion=explode("&",$response);
-$credenciales = array();
-foreach ($porcion as $k) {
-  $temp=explode("=",$k);
-  $credenciales[$temp[0]]=$temp[1];
-}
+var_dump($response);
+// $porcion=explode("&",$response);
+// $credenciales = array();
+// foreach ($porcion as $k) {
+//   $temp=explode("=",$k);
+//   $credenciales[$temp[0]]=$temp[1];
+// }
 
 // var_dump($credenciales);
 
-$TOKEN=$credenciales["oauth_token"];
-$TOKEN_SECRET=$credenciales["oauth_token_secret"];
-
-$_SESSION["oauth_token"]=$credenciales["oauth_token"];
-$_SESSION["oauth_access_token"]=$credenciales["oauth_token_secret"];
-$_SESSION["loggedin"]=true;
-
-$url2="https://api.twitter.com/oauth/authorize";
-$requestMethod2="GET";
-$getfield2="?oauth_token=".$credenciales["oauth_token"];
-
-$settings = array(
-  'oauth_access_token' => $TOKEN,
-  'oauth_access_token_secret' => $TOKEN_SECRET,
-  'consumer_key' => CONSUMER_KEY,
-  'consumer_secret' => CONSUMER_SECRET
-);
-
-$twitter=new TwitterAPIExchange($settings);
-$response2 = $twitter->setGetfield($getfield2)
-    ->buildOauth($url2, $requestMethod2)
-    ->performRequest();
-
-echo $response2;
+// $TOKEN=$credenciales["oauth_token"];
+// $TOKEN_SECRET=$credenciales["oauth_token_secret"];
+//
+// $_SESSION["oauth_token"]=$credenciales["oauth_token"];
+// $_SESSION["oauth_access_token"]=$credenciales["oauth_token_secret"];
+// $_SESSION["loggedin"]=true;
+//
+// $url2="https://api.twitter.com/oauth/authorize";
+// $requestMethod2="GET";
+// $getfield2="?oauth_token=".$credenciales["oauth_token"];
+//
+// $settings = array(
+//   'oauth_access_token' => $TOKEN,
+//   'oauth_access_token_secret' => $TOKEN_SECRET,
+//   'consumer_key' => CONSUMER_KEY,
+//   'consumer_secret' => CONSUMER_SECRET
+// );
+//
+// $twitter=new TwitterAPIExchange($settings);
+// $response2 = $twitter->setGetfield($getfield2)
+//     ->buildOauth($url2, $requestMethod2)
+//     ->performRequest();
+//
+// echo $response2;
