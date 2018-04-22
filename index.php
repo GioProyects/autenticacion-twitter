@@ -9,18 +9,8 @@
     <link rel="stylesheet" href="css/estilos.css">
   </head>
   <body>
-
-    <?php
-    if (isset($_SESSION)) {
-      var_dump($_SESSION);
-     ?>
-     <button type="button" id="btnDatos">Get datos</button>
-     <div id="resultados"></div>
-    <?php }else{  ?>
       <button type="button">  <a href="twitter/autenticacion.php">Acceder</a> </button>
       <h3>No has inicado sesion</h3>
-    <?php } ?>
-
 
     <script src="js/funciones.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

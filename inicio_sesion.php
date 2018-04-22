@@ -5,7 +5,8 @@
     <title>Iniciado Sesion</title>
   </head>
   <body>
-    <?php var_dump($_SESSION) ?>
+    <button type="button" id="btnDatos">Get datos</button>
+    <div id="resultados"></div>
 
   </body>
 </html>
