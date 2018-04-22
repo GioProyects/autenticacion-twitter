@@ -12,7 +12,7 @@
       <a href="twitter/autenticacion.php">Acceder</a>
       <h3>No has inicado sesion</h3>
 
-    <script src="js/funciones.js"></script>
+    <!-- <script src="js/funciones.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </body>
