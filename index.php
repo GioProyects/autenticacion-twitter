@@ -13,7 +13,7 @@
     <?php
     if (isset($_SESSION)) {
      ?>
-     <button type="button" id="btnDatos"> <a href="twitter/autenticacion.php">Get datos</a></button>
+     <button type="button" id="btnDatos">Get datos</button>
      <div id="resultados"></div>
     <?php }else{ ?>
       <button type="button">  <a href="twitter/autenticacion.php">Acceder</a> </button>
