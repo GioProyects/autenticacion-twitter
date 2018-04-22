@@ -8,7 +8,7 @@ var fun=(function () {
         console.log(this.responseText);
       }
     }
-    xhttp.open("GET", "twitter/tweets.php"/*?token="+token+"token_secreto="+token_secreto*/, true);
+    xhttp.open("GET", "twitter/tweets.php?token="+token+"&token_secreto="+token_secreto, true);
     xhttp.send();
   }
 
