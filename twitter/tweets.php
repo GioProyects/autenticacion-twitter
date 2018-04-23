@@ -9,28 +9,23 @@ require_once 'TwitterAPIExchange.php';
   $TOKEN=$_SESSION["oauth_token"];
   $TOKEN_SECRET=$_SESSION["oauth_access_token"];
 
-  var_dump($TOKEN);
-  var_dump($TOKEN_SECRET);
+  $getfield="?q=#love&count=100";
+  $requestMethod = 'GET';
+  $url="https://api.twitter.com/1.1/statuses/show.json";
 
+  $settings = array(
+      'oauth_access_token' => $TOKEN,
+      'oauth_access_token_secret' => $TOKEN_SECRET,
+      'consumer_key' => CONSUMER_KEY,
+      'consumer_secret' => CONSUMER_SECRET
+  );
 
-  // $getfield="?q=#love&count=100";
-  // $requestMethod = 'GET';
-  // $url="https://api.twitter.com/1.1/statuses/show.json";
-  //
-  // $settings = array(
-  //     'oauth_access_token' => $TOKEN,
-  //     'oauth_access_token_secret' => $TOKEN_SECRET,
-  //     'consumer_key' => CONSUMER_KEY,
-  //     'consumer_secret' => CONSUMER_SECRET
-  // );
-  //
-  //
-  // $twitter = new TwitterAPIExchange($settings);
-  // $response = $twitter->setGetfield($getfield)
-  //     ->buildOauth($url, $requestMethod)
-  //     ->performRequest();
-  //
-  // echo $response;
+  $twitter = new TwitterAPIExchange($settings);
+  $response = $twitter->setGetfield($getfield)
+      ->buildOauth($url, $requestMethod)
+      ->performRequest();
+
+  echo $response;
 
 
 
