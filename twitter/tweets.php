@@ -25,7 +25,7 @@ require_once 'TwitterAPIExchange.php';
       ->buildOauth($url, $requestMethod)
       ->performRequest();
 
-  echo json_encode($response);
+  echo $response;
 
 
 
