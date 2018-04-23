@@ -27,7 +27,7 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"]==true) {
     <div id="resultados"></div>
     <script src="js/funciones.js"></script>
 
-    <button type="button"> <a href="twitter/logout.php">Cerrar Sesion</a></button>
+    <a href="twitter/logout.php">Cerrar Sesion</a>
 
 
   </body>
