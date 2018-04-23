@@ -35,10 +35,10 @@ foreach ($porcion as $k) {
 // var_dump($credenciales["oauth_token_secret"]);
 
 $TOKEN=$credenciales["oauth_token"];
-$TOKEN_SECRET=$credenciales["oauth_token_secret"];
+$TOKEN_SECRET=$credenciales["oauth_access_token"];
 
 $_SESSION["oauth_token"]=$credenciales["oauth_token"];
-$_SESSION["oauth_access_token"]=$credenciales["oauth_token_secret"];
+$_SESSION["oauth_access_token"]=$credenciales["oauth_access_token"];
 $_SESSION["loggedin"]=true;
 
 // var_dump($TOKEN_SECRET);
