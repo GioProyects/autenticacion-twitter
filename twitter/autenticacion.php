@@ -25,7 +25,6 @@ $response=$twitter->buildOauth($url,$requestMethod)
                   ->performRequest();
 // var_dump($response);
 $porcion=explode("&",$response);
-
 $credenciales = array();
 foreach ($porcion as $k) {
   $temp=explode("=",$k);
