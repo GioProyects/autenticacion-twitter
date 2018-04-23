@@ -25,7 +25,6 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"]==true) {
 
     <!-- <a href="twitter/tweets.php">Get datos</a> -->
     <div id="resultados"></div>
-
     <script src="js/funciones.js"></script>
 
   </body>
