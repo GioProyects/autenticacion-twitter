@@ -4,11 +4,15 @@ require_once 'TwitterAPIExchange.php';
   define('CONSUMER_KEY', 'IsfOhNHmYtQS5myPZvXB7kqCf');
   define('CONSUMER_SECRET', 'hSe6ZQbao5wEyIvlGFXhA1itlSME9NBhsqOsiKYm5jmOUFJLMx');
 
-  var_dump($_SESSION);
+  // var_dump($_SESSION);
 
-  // $TOKEN=$_SESSION["oauth_token"];
-  // $TOKEN_SECRET=$_SESSION["oauth_access_token"];
-  //
+  $TOKEN=$_SESSION["oauth_token"];
+  $TOKEN_SECRET=$_SESSION["oauth_access_token"];
+
+  var_dump($TOKEN);
+  var_dump($TOKEN_SECRET);
+
+
   // $getfield="?q=#love&count=100";
   // $requestMethod = 'GET';
   // $url="https://api.twitter.com/1.1/statuses/show.json";
